@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="포휴먼"
+        android:textSize="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/weatherview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_reset" />
+
+    <TextView
+        android:id="@+id/weatherview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="0.0도"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/whido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/whido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="12dp"
+        android:text="위도"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/gyeongdo"
+        app:layout_constraintEnd_toEndOf="@+id/weatherview"
+        app:layout_constraintTop_toBottomOf="@+id/weatherview" />
+
+    <TextView
+        android:id="@+id/gyeongdo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="경도"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvHumidity"
+        app:layout_constraintStart_toStartOf="@+id/whido"
+        app:layout_constraintTop_toBottomOf="@+id/whido" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="123dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="52dp"
+        android:text="위도 경도\n재설정"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHumidity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="138dp"
+        android:text="지역"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gyeongdo" />
+
+    <TextView
+        android:id="@+id/tvTemp"
+        android:layout_width="0dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="80dp"
+        android:text="온도"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvHumidity"
+        app:layout_constraintTop_toTopOf="@+id/tvHumidity" />
+
+
+</android.support.constraint.ConstraintLayout>
